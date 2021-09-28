@@ -17,6 +17,14 @@ def Dodaj_Listy():
             lista3.append(wynik)
     return lista3
 
+### def Dodaj_Listy(lista1, lista2):
+###    if len(lista1) != len(lista2):
+###         raise Exception("listy muszą być tej samej długości")
+###     ELSE TU JUZ NIE JEST POTRZEBNY
+###     W RETURNIE MOŻNA UŻYC LIST COMPREHENSION. W TEN SPOSÓB SKRÓCILIŚMY DO 3 LINIJEK CAŁY KOD. :)
+###     return [lista1[n] + lista2[n] for n in len(lista1)] 
+### Dodaj_Listy([1,2,3], [4,5,6])
+
 print(Dodaj_Listy())
 
 """Stwórz funkcję nazwaną zbadajTrojkat() 
