@@ -20,7 +20,7 @@ def store_user_data():
                 break
 
             else:
-                print('Podany numer telefonu jest nieprawidłowy. Spróbuj ponownie.')
+                raise ValueError
 
 
         except ValueError:
