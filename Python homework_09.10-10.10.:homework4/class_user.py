@@ -4,8 +4,8 @@ from class_human import Human
 
 
 class User(Human):
-    def __init__(self, first_name, last_name, date_of_birth, age=0):
-        super().__init__(self, first_name, last_name, date_of_birth)
+    def __init__(self, first_name, last_name, date_of_birth):
+        super().__init__(first_name, last_name, date_of_birth)
 #         self.age = age
 ### Nie ma sensu dawać możliwości ustawiania tego ręcznie
 
@@ -26,3 +26,7 @@ class User(Human):
 #     def age(self, value):
 #         self.age = value
 
+
+if __name__ == '__main__':
+    human = User('Karol', 'Mularski', '11-05-1994')
+    print(human.date_of_birth, human.age)
