@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+Wszystkie faktury:
+
+    <ul>
+        {% for invoice in object_list%}
+       <li>Numer faktury: {{invoice.number}}, kwota: {{invoice.amount}}, termin płatności: {{invoice.payment_date}}</li>
+
+        {% endfor %}
+    </ul>
+
+        Suma wszystkich faktur = {{ suma }}
+
+{% endblock %}
+
+#Poniżej kod do tworzenia tabeli, ale nie działa#
+{#    <style> td { border: 1px solid black; } </style>#}
+{#    <table>#}
+{#    <tr>#}
+{#        <th> Numer faktury</th>#}
+{#        <th> Kwota</th>#}
+{#        <th> Termin płatności</th>#}
+{#    </tr>#}
+{##}
+{#        {% for invoice in invoices %}#}
+{#    <tr>#}
+{#    <td> {{ invoice.number }}</td>#}
+{#    <td> {{ invoice.amount }}</td>#}
+{#    <td> {{ invoice.payment_date }}</td>#}
+{#    </tr>#}
+{##}
+{#    {% endfor %}#}
+{##}
+{#{% endblock %}#}
