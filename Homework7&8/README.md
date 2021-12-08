@@ -1,1 +1,1 @@
-Zadanie domowe nr 7 i 8 znajduje się na branch 8
+Zadanie domowe nr 7 i 8 znajduje się na branch MASTER
