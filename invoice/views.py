@@ -10,5 +10,5 @@ class InvoiceListView(ListView):
 
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super().get_context_data()
-        context['suma'] = Invoice.objects.aggregate(Sum('amount'))
+        context['suma'] = Invoice.objects.aggregate(total=Sum('amount'))['total']
         return context
