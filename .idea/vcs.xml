@@ -2,5 +2,10 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Homework7" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Homework7&amp;8" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Homework7&amp;8/Faktura" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Homework7&amp;8/Homework7" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Homework7&amp;8/djangoProject2" vcs="Git" />
   </component>
 </project>
