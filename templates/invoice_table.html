@@ -1,11 +1,14 @@
 {% extends "base.html" %}
-
+{% load invoice_templatetags %}
 {% block content %}
+
 Wszystkie faktury:
+
 
     <ul>
         {% for invoice in object_list%}
-       <li>Numer faktury: {{invoice.number}}, kwota: {{invoice.amount}}, termin płatności: {{invoice.payment_date}}</li>
+
+       <li>Numer faktury: {{invoice.number}}, kwota: {{invoice.amount}}, termin płatności: {{invoice.payment_date}} </li>
 
         {% endfor %}
     </ul>
@@ -14,17 +17,24 @@ Wszystkie faktury:
 
         <style> td { border: 1px solid black; } </style>
         <table>
+
         <tr>
-            <th> Numer faktury</th>
-            <th> Kwota</th>
-            <th> Termin płatności</th>
+            <td> Numer faktury</td>
+            <td> Kwota</td>
+            <td> Termin płatności</td>
+            <td> Czy faktura opłacona</td>
         </tr>
             {% for invoice in object_list %}
         <tr>
         <td> {{ invoice.number }}</td>
         <td> {{ invoice.amount }}</td>
         <td> {{ invoice.payment_date }}</td>
+        <td> {{ invoice.is_paid }}</td>
+
         </tr>
+
         {% endfor %}
+
+    </table>
 
 {% endblock %}
