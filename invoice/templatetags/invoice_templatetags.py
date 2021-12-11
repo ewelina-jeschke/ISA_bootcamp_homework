@@ -1,30 +1,23 @@
 from datetime import datetime
 
 from django import template
+from django.utils.safestring import mark_safe
 
 register = template.Library()
 
 
-# @register.filter
-# def row_styler(invoice_date):
-#     today = datetime.datetime.today()
-#     if invoice_date - today > 7:
-#         return 'due'
-#     if invoce_date - date in range(3,7):
-#         return 'almost-due'
-#     else:
-#         return 'new'
-#     return mark_safe(style)
-
-
 @register.filter
-def row_styler(invoice_date):
+def row_styler(invoice, style=None):
     today = datetime.datetime.today()
-    print(today)
-    # if invoice_date - today > 7:
-    #     return 'due'
-    # if invoce_date - date in range(3, 7):
-    #     return 'almost-due'
-    # else:
-    #     return 'new'
-    # return mark_safe(style)
+    if invoice.is_paid:
+        return 'paid'
+    elif (invoice.payment_date - today).days < 1:
+        return 'overdue'
+    elif (invoice.payment_date - today).days > 7:
+        return 'due'
+    elif (invoice.payment_date - today).days in range(1, 7):
+        return 'almost-due'
+
+    return mark_safe(style)
+
+
