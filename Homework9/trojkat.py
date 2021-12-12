@@ -8,6 +8,6 @@ def trojkat(bok1: int, bok2: int):
             return bok3
 
         except TypeError:
-            print('Nie wpisałeś liczby. Podaj ponownie długość boku trójkąta.')
+            raise TypeError('Nie wpisałeś liczby. Podaj ponownie długość boku trójkąta.')
 
-trojkat(3,'string')
+trojkat(3,4)
