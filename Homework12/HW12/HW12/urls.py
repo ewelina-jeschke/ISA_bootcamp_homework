@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from Homework12.HW12.myapp.views import HomeView
+from myapp.views import HomeView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
